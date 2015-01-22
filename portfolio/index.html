@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
 
+    <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://bootswatch.com/superhero/bootstrap.min.css">
+   <link rel="stylesheet" href="http://bootswatch.com/slate/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/stylesheets/bootstrap-styles.css">
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -20,7 +20,7 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -36,10 +36,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -51,11 +51,16 @@
               </ul>
             </li>
           </ul>
-          
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -69,38 +74,73 @@
       </div><!-- /.container-fluid -->
     </nav>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Hello, world! <span class="glyphicon glyphicon-tower"></span></h1>
-        <p>Something awesome</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-      </div> <!-- end jumbotron -->
+
+    <div class="jumbotron">
+     <h1>Hello, world!</h1>
+     <p>Bootstrap is the most awesome thing ever.</p>
+     <p><a class="btn btn-primary btn-lg" role="button">Click me!</a></p>
+    </div>
+
       <div class="row">
         <div class="col-md-12">
-          <p>Helvetica tousled vegan, Williamsburg chambray sriracha stumptown iPhone skateboard put a bird on it letterpress bitters. Banh mi PBR yr, deep v narwhal crucifix street art mlkshk farm-to-table DIY skateboard Truffaut taxidermy put a bird on it tattooed.</p><p>Blue Bottle mustache PBR, 8-bit leggings Neutra roof party fingerstache Truffaut banjo before they sold out you probably haven't heard of them mumblecore put a bird on it craft beer. Pickled distillery actually chambray deep v. Cardigan meh tattooed, fanny pack YOLO Helvetica Vice heirloom cronut iPhone. Single-origin coffee mustache sartorial tote bag seitan migas. Shoreditch cronut typewriter art party keytar, you probably haven't heard of them skateboard wolf fap jean shorts American Apparel tattooed sartorial Truffaut mumblecore.</p>
-        </div> <!-- end full width column -->
-      </div> <!-- end row -->
+          <p>Squid bitters typewriter cardigan freegan hoodie VHS kale chips cornhole Tonx, fingerstache 90's Schlitz Wes Anderson vegan. Drinking vinegar pop-up food truck Tonx Banksy Williamsburg pork belly direct trade kogi. Asymmetrical blog kale chips fanny pack beard, put a bird on it salvia crucifix butcher. Marfa put a bird on it quinoa Shoreditch, sartorial XOXO organic photo booth American Apparel dreamcatcher food truck beard occupy VHS. XOXO fashion axe</p>
+        </div> 
+      </div> <!-- end of 1 column row -->
+
       <div class="row">
-      <div class="col-md-4">
-        <p>Authentic typewriter you probably haven't heard of them normcore, sustainable hoodie Thundercats heirloom squid craft beer Schlitz. Ugh biodiesel Pitchfork mixtape High Life. Put a bird on it selvage bicycle rights paleo.</p>
-        <button type="button" class="btn btn-success btn-lg">Sign up Now!!!</button>
-      </div>
-      <div class="col-md-4">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe src="http://www.youtube.com/embed/jR4lLJu_-wE" class="embed-responsive-item"></iframe>
+        <div class="col-md-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/-6BsMzc9mMs"></iframe>
+              </div>
+              <p>Authentic typewriter you probably haven't heard of them normcore, sustainable hoodie Thundercats heirloom squid craft beer Schlitz. Ugh biodiesel Pitchfork mixtape High Life. Put a bird on it selvage bicycle rights paleo.</p>
+            </div>
           </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+              <p>Authentic typewriter you probably haven't heard of them normcore, sustainable hoodie Thundercats heirloom squid craft beer Schlitz. Ugh biodiesel Pitchfork mixtape High Life. Put a bird on it selvage bicycle rights paleo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/p48x48/10291096_289421894567037_6529325450369639895_n.jpg?oh=565ac233db1930dfb4894f830281735f&oe=54AD97E5&__gda__=1425525715_9446ad5a4f8fd4c3eada3c0622beec8d" alt="Mini Doxie">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Media heading</h4>
+                  <p>Authentic typewriter you probably haven't heard of them normcore, sustainable hoodie Thundercats heirloom squid craft beer Schlitz. Ugh biodiesel Pitchfork mixtape High Life. Put a bird on it selvage bicycle rights paleo.</p>
+                    <button type="button" class="btn btn-warning btn-sm">Don't Click</button>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <p>Authentic typewriter you probably haven't heard of them normcore, sustainable hoodie Thundercats heirloom squid craft beer Schlitz. Ugh biodiesel Pitchfork mi</p>
-      </div>
-    </div>
+
+    </div> <!-- end container -->
 
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-4"><p>&copy; 2014</p></div>
+          <div class="col-md-4">&copy; 2014</div>
           <div class="col-md-4">
             <ul class="nav nav-pills">
-              <li><a href="#">Contact Us <span class="glyphicon glyphicon-envelope"></span></a></li>
+              <li><a href="#">Contact Us <span class="glyphicon glyphicon-envelope"/></a></li>
               <li><a href="#">Get Support</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
@@ -112,10 +152,9 @@
       </div>
     </footer>
 
-    </div> <!-- end container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>
