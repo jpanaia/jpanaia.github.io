@@ -155,6 +155,7 @@
 			form input[type=text],
 			form input[type=email],
 			form input[type=password],
+			form input[type=email],
 			form select,
 			form textarea
 			{
@@ -655,6 +656,10 @@
 			.wrapper.style4 form textarea:focus
 			{
 				background: #252525;
+			}
+
+			.wrapper.style4 #alert {
+				display: none;
 			}
 		
 /*********************************************************************************/
