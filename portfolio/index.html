@@ -11,13 +11,6 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
-        <script>
-          $(document).ready(function() {
-          	  $('#submit').click(function() {
-		       $('#alert').show();
-		    });
-          });
-        </script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -140,15 +133,12 @@
 					<header>
 						<h2>Want to chat?</h2>
 						<p>Let's talk!</p>
-						<p id="alert"><br/>Thanks for sending a message!</p>
-
 					</header>
-					<div id ="contact-form">
+					<div >
 						<div class="row">
 							<div class="12u">
-				                <form action="https://getsimpleform.com/messages?form_api_token=1b05a1e97433852f7ac8c359fbbcb8eb" method="post">
-				                    <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-				                    <input type='hidden' name='redirect_to' value='http://jpanaia.github.io/portfolio/index.html#contact' />
+				               <form action="#" id ="contact-form">
+				                    <input type='hidden' value='#contact' /> 
 				                  <div>
 									<div class="row">
 										<div class="6u">
@@ -201,7 +191,20 @@
 				</footer>
 			</article>
 		</div>
-
+		<script type="text/javascript">
+		      $('#contact-form').submit(function(){
+		        $.ajax({
+		          dataType: 'jsonp',
+		          url: "http://getsimpleform.com/messages/ajax?form_api_token=1b05a1e97433852f7ac8c359fbbcb8eb",
+		          data: $('#contact-form').serialize() 
+		        }).done(function() {
+		          //callback which can be used to show a thank you message
+		          //and reset the form
+		          alert("Thank you, for contacting us");
+		        });
+		        return false; //to stop the form from submitting
+		      });
+        </script>
 	</body>
 </html>
 <!-- Thanks to HTML5 UP for the Miniport template -->
